@@ -1,16 +1,19 @@
-package mitconsult.models.entities;
+package be.bstorm.models.entities;
 
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
+@Getter
 @MappedSuperclass
-@AllArgsConstructor@NoArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public abstract class BaseRelation <T extends Serializable> {
+
     @EmbeddedId
     private T id;
-
 }
