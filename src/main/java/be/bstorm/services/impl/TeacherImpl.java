@@ -5,6 +5,7 @@ import be.bstorm.repositories.TeacherRepository;
 import be.bstorm.services.TeacherService;
 
 import java.util.List;
+import java.util.Locale;
 
 public class TeacherImpl implements TeacherService {
 
@@ -18,7 +19,7 @@ public class TeacherImpl implements TeacherService {
 
     public List<Teacher> findAll() { return teacherRepository.findAll();}
 
-    public List<Teacher> findManyByName(String lastName) { return null; } // TODO: 11/5/2023 à faire
+    public List<Teacher> findManyByName(String firstName) { return teacherRepository.searchByTitle(firstName.toLowerCase());}
 
     public void deleteAll() { teacherRepository.deleteAll();}
 

@@ -1,6 +1,5 @@
-package be.bstorm.models.dtos;
+package be.bstorm.models.dtos.teacher;
 
-import be.bstorm.models.entities.embedded.Address;
 import be.bstorm.models.entities.persons.Teacher;
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package be.bstorm.controllers;
 
-import be.bstorm.models.dtos.TeacherShortDTO;
+import be.bstorm.models.dtos.teacher.TeacherShortDTO;
 import be.bstorm.models.entities.persons.Teacher;
 import be.bstorm.models.forms.TeacherForm;
 import be.bstorm.services.impl.TeacherImpl;
