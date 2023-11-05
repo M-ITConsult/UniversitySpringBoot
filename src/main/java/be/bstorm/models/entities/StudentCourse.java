@@ -35,12 +35,13 @@ public class StudentCourse extends BaseRelation<StudentCourse.StudentCourseId> {
     @Column(nullable = false)
     private int year;
 
+    @Getter
     @Embeddable
     public static class StudentCourseId implements Serializable {
 
-        @Getter @Setter
+        @Setter
         private String studentId;
-        @Getter @Setter
+        @Setter
         private String courseId;
     }
 }
