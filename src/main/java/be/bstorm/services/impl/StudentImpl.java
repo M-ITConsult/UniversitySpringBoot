@@ -3,8 +3,10 @@ package be.bstorm.services.impl;
 import be.bstorm.models.entities.persons.Student;
 import be.bstorm.repositories.StudentRepository;
 import be.bstorm.services.StudentService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+@Service
 
 public class StudentImpl implements StudentService {
 
@@ -24,7 +26,7 @@ public class StudentImpl implements StudentService {
 
     @Override
     public List<Student> findManyByName(String firstname) {
-        return null; /// TODO: 11/5/2023 mettre query dans le repo
+        return studentRepository.searchByFirstName(firstname.toLowerCase());
     }
 
     @Override

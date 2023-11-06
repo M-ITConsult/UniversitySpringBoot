@@ -10,9 +10,9 @@ import java.util.List;
 
 @Repository
 public interface TeacherRepository extends JpaRepository<Teacher, Long> {
-    List<Teacher> findTeachersByNameContainingIgnoreCase(String firstName);
+    List<Teacher> findByFirstnameContainingIgnoreCase(String firstname);
 
     @Query("select t from Teacher t where upper(t.firstname) like %:firstname%")
-    List<Teacher> searchByTitle(@Param("firstname") String firstName);
+    List<Teacher> searchByFirstName(@Param("firstname") String firstname);
 
 }

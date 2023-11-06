@@ -5,6 +5,7 @@ import be.bstorm.models.entities.persons.Teacher;
 import be.bstorm.models.forms.TeacherForm;
 import be.bstorm.services.impl.TeacherImpl;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,7 @@ import java.util.List;
 public class TeacherController {
 
     private final String REDIRECT_TO_LIST = "redirect:/teacher";
+    @Autowired
     private final TeacherImpl teacher;
 
     public TeacherController(TeacherImpl teacher) {

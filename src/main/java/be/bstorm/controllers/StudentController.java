@@ -5,6 +5,7 @@ import be.bstorm.models.entities.persons.Student;
 import be.bstorm.models.forms.StudentForm;
 import be.bstorm.services.impl.StudentImpl;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ import java.util.List;
 @RequestMapping("/student")
 public class StudentController {
     private final String REDIRECT_TO_LIST = "redirect:/student";
+    @Autowired
     private final StudentImpl student;
 
     public StudentController(StudentImpl student) {
@@ -40,7 +42,7 @@ public class StudentController {
 
     @GetMapping("/create")
     public String getCreate(Model model) {
-//        model.addAttribute("teacherFrom", new TeacherForm());
+        model.addAttribute("studentFrom", new StudentForm());
         return "student/create";
     }
 
